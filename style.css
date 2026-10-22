@@ -40,3 +40,8 @@ footer{padding:10vh 4vw 8vh;text-align:center;font-size:13px;letter-spacing:.12e
  .spread figure.sm{width:82%}
 }
 header.solid{background:var(--bg);color:var(--ink);text-shadow:none}
+/* Understated photo credit — sits right under the place/material label */
+.credit.pc{text-align:right;line-height:1.4;letter-spacing:.08em;font-variant-caps:all-small-caps;font-size:11.5px;color:#a39c93;margin-top:3px}
+.credit.pc a{color:inherit;text-decoration:none;transition:color .2s}
+.credit.pc a[rel~=license]{border-bottom:1px solid rgba(163,156,147,.35)}
+.credit.pc a:hover,.credit.pc a:focus-visible{color:var(--dot);border-color:var(--dot)}
