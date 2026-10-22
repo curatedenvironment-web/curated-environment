@@ -29,6 +29,7 @@ nav a{font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-left:2.
 .center img{display:block;width:100%;height:auto}
 .center .lab{padding:0 4vw}
 footer{padding:10vh 4vw 8vh;text-align:center;font-size:13px;letter-spacing:.12em}
+.spread figure.sm{width:var(--w);justify-self:center;align-self:center}
 .credit{font-size:10px;letter-spacing:.06em;text-transform:none;color:var(--mute);margin-top:4px}
 @media(max-width:700px){
  nav a{margin-left:1.2em}
@@ -36,5 +37,6 @@ footer{padding:10vh 4vw 8vh;text-align:center;font-size:13px;letter-spacing:.12e
  .title{margin-bottom:12px}
  .pair{gap:8px}
  .ph{min-height:160px}
+ .spread figure.sm{width:82%}
 }
 header.solid{background:var(--bg);color:var(--ink);text-shadow:none}
