@@ -93,3 +93,13 @@ footer{display:flex;justify-content:center;flex-wrap:wrap;gap:1.4em 4em}
 }
 /* About: brand + creative (same format as the work) */
 .about-bc{margin-top:2.8em}
+/* Header: Brown + Brown logo mark */
+.mark{display:inline-flex;align-items:center}.bblogo{width:30px;height:auto;filter:brightness(0) invert(1) drop-shadow(0 0 6px rgba(0,0,0,.25))}header.solid .bblogo{filter:brightness(0);opacity:.85}.mk-sep{display:inline-block;width:1px;height:22px;background:currentColor;opacity:.45;margin:0 14px}@media(max-width:600px){header{padding-left:4vw;padding-right:4vw;gap:8px}.bblogo{width:18px}.mk-sep{margin:0 6px;height:14px}.mark{font-size:10.5px;letter-spacing:.08em}nav a{font-size:10px;margin-left:.6em;letter-spacing:.09em}}
+/* Cut-off fixes: keep header on one line and inside the screen on phones; anchors land below the fixed header; About photo scrolls normally so its bottom is never hidden */
+@media(max-width:600px){.mark{white-space:nowrap;min-width:0}nav{white-space:nowrap;flex-shrink:0}}
+@media(max-width:360px){.mark{font-size:9.5px;letter-spacing:.05em}.bblogo{width:16px}.mk-sep{margin:0 5px}nav a{font-size:9.5px;margin-left:.5em;letter-spacing:.06em}}
+section[id],footer[id],.intro[id]{scroll-margin-top:76px}
+.spread.about .about-a{position:static}
+@media(max-width:400px){.about-o-k span,.about-m span{white-space:normal}}
+.mark>*{flex-shrink:0}
+@media(max-width:340px){.mark{font-size:9px;letter-spacing:.04em}.mk-sep{margin:0 4px}.dot{margin-left:.4em}nav a{font-size:9px;margin-left:.45em;letter-spacing:.05em}}
