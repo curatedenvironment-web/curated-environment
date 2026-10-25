@@ -66,3 +66,30 @@ header.solid{background:var(--bg);color:var(--ink);text-shadow:none}
 @media(max-width:400px){header{gap:14px;padding-left:5vw;padding-right:5vw}.mark{font-size:11.5px;letter-spacing:.13em;white-space:nowrap}nav{white-space:nowrap}nav a{font-size:10.5px;margin-left:.75em;letter-spacing:.12em}}
 .about-m span{white-space:nowrap}
 @media(max-width:700px){.about-m span{display:block}.about-m i{display:none}}
+/* About: the work */
+.about-o{margin-top:2.4em;padding-top:1.6em;border-top:1px solid rgba(138,132,124,.25)}
+.about-o h3{font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);margin-bottom:1em}
+.about-o h3::after{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--dot);margin-left:.7em;vertical-align:middle}
+.about-t .about-o-k{font-size:11px;line-height:2;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:1em}
+.about-o-k span{display:block;white-space:nowrap}
+.about-t .about-o-k i{display:none}
+.about-o-k i{font-style:normal;color:var(--dot);margin:0 .35em}
+@media(max-width:700px){.about-o-k span{display:block}.about-o-k i{display:none}}
+/* About v2: one portrait in the spread format (image left, words right) */
+.spread.about{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3vw;align-items:start;margin-bottom:14vh}
+.spread.about .about-a{position:sticky;top:90px}
+.spread.about .about-t{max-width:34em;padding-top:.4em}
+.about-c{margin-top:1.6em;display:flex;flex-wrap:wrap;gap:1.2em 3em}
+.about-t .about-c p,footer p{margin:0;font-size:13px;letter-spacing:.06em}
+.about-c small,footer small{display:block;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin-bottom:.2em}
+.about-c a,footer a{border-bottom:1px solid rgba(138,132,124,.35);overflow-wrap:anywhere;transition:color .2s,border-color .2s}
+.about-c a:hover,.about-c a:focus-visible,footer a:hover,footer a:focus-visible{color:var(--dot);border-color:var(--dot)}
+footer{display:flex;justify-content:center;flex-wrap:wrap;gap:1.4em 4em}
+@media(max-width:700px){
+ .spread.about{grid-template-columns:minmax(0,1fr);gap:28px;margin-bottom:10vh}
+ .spread.about .about-a{position:static}
+ .about-c{flex-direction:column;gap:1em}
+ footer{flex-direction:column;gap:1.2em}
+}
+/* About: brand + creative (same format as the work) */
+.about-bc{margin-top:2.8em}
