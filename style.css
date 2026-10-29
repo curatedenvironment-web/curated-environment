@@ -107,3 +107,4 @@ section[id],footer[id],.intro[id]{scroll-margin-top:76px}
 /* Header: BBD logo replaces the dot after the wordmark */
 .bbend{margin-left:12px;width:26px}@media(max-width:600px){.bbend{margin-left:7px;width:17px}}@media(max-width:360px){.bbend{margin-left:5px;width:15px}}
 .about-o h3.nodot::after{display:none}
+.bbstart{margin-right:12px;width:30px}@media(max-width:600px){.bbstart{margin-right:7px;width:20px}}@media(max-width:360px){.bbstart{margin-right:5px;width:17px}}
