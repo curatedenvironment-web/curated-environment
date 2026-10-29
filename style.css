@@ -103,3 +103,7 @@ section[id],footer[id],.intro[id]{scroll-margin-top:76px}
 @media(max-width:400px){.about-o-k span,.about-m span{white-space:normal}}
 .mark>*{flex-shrink:0}
 @media(max-width:340px){.mark{font-size:9px;letter-spacing:.04em}.mk-sep{margin:0 4px}.dot{margin-left:.4em}nav a{font-size:9px;margin-left:.45em;letter-spacing:.05em}}
+
+/* Header: BBD logo replaces the dot after the wordmark */
+.bbend{margin-left:12px;width:26px}@media(max-width:600px){.bbend{margin-left:7px;width:17px}}@media(max-width:360px){.bbend{margin-left:5px;width:15px}}
+.about-o h3.nodot::after{display:none}
