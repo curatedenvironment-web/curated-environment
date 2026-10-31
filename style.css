@@ -109,3 +109,16 @@ section[id],footer[id],.intro[id]{scroll-margin-top:76px}
 .about-o h3.nodot::after{display:none}
 .bbstart{margin-right:12px;width:30px}@media(max-width:600px){.bbstart{margin-right:7px;width:20px}}@media(max-width:360px){.bbstart{margin-right:5px;width:17px}}
 .hero{background:#d9d2c7 url(video/love_loop_v11_wide_poster.jpg) center/cover no-repeat}@media(max-width:600px){.hero{background-image:url(video/love_loop_v11_mobile_poster.jpg)}}.snd{transition:background .3s,border-color .3s}.snd.playing{background:rgba(255,255,255,.9);border-color:#fff}.snd.playing svg{stroke:#2a2724}.snd.playing i{animation:sndpulse 1.6s ease-in-out infinite}.snd.loading{opacity:.6}@keyframes sndpulse{50%{transform:scale(1.6);opacity:.5}}
+
+/* Footer: social icons (Instagram, X, YouTube) */
+.social{flex-basis:100%;display:flex;flex-direction:column;align-items:center;gap:.7em;margin-top:.6em}
+.social small{display:block;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+.social-i{display:flex;justify-content:center;gap:22px}
+footer .social a{margin:0;letter-spacing:0;border:0;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;color:var(--ink);position:relative;transition:color .2s,transform .25s}
+.social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.3}
+.social svg .f{fill:currentColor;stroke:none}
+footer .social a::after{content:"";position:absolute;bottom:3px;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--dot);opacity:0;transform:scale(.4);transition:opacity .2s,transform .25s}
+footer .social a:hover,footer .social a:focus-visible{color:var(--dot);transform:translateY(-2px)}
+footer .social a:hover::after,footer .social a:focus-visible::after{opacity:1;transform:scale(1)}
+footer .social a:focus-visible{outline:1px solid var(--dot);outline-offset:2px}
+@media(max-width:700px){.social{margin-top:.4em}.social-i{gap:18px}}
