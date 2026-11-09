@@ -1,4 +1,22 @@
-document.querySelectorAll('.hero video').forEach(v=>{v.play().catch(()=>{})});
+(()=>{
+  const videos=[...document.querySelectorAll('.hero video')];
+  const tryPlay=v=>v.play().catch(()=>{});
+  const kick=()=>videos.forEach(tryPlay);
+  videos.forEach(v=>{
+    v.muted=true;
+    v.defaultMuted=true;
+    v.setAttribute('playsinline','');
+    v.setAttribute('webkit-playsinline','');
+    tryPlay(v);
+    v.addEventListener('loadeddata',()=>tryPlay(v),{once:true});
+    v.addEventListener('canplay',()=>tryPlay(v),{once:true});
+  });
+  // If autoplay was blocked, resume on first user gesture
+  const unlock=()=>{kick();['pointerdown','touchstart','keydown'].forEach(e=>removeEventListener(e,unlock,{capture:true}))};
+  ['pointerdown','touchstart','keydown'].forEach(e=>addEventListener(e,unlock,{capture:true,passive:true}));
+  // Retry once after a short delay (slow networks / late decode)
+  setTimeout(kick,400);
+})();
 const b=document.querySelector('.snd');
 const tone=new Audio();tone.loop=true;tone.preload='none';
 tone.src=tone.canPlayType('audio/mp4')?'video/love_528.m4a':'video/love_528.mp3';
